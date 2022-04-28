@@ -1,0 +1,407 @@
+/* Stylesheet by Nimita Shery, 2022 */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  /* background-color: #f5f0bf; */
+  /* background-color: #eee593; */
+}
+body {
+  text-size-adjust: 100%;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+  padding: 0;
+}
+
+/* a {
+  color: #1e85c9;
+} */
+.vertical-nav {
+  z-index: 30;
+  position: fixed;
+  background:#949494;
+  box-shadow: 0 0 40px #00000021;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 30vh;
+  width: 70px;
+}
+.vertical-nav li {
+  list-style: none;
+  display: block;
+  width: 100%;
+  border-bottom: solid 1px #f2f5ff;
+  text-align: center;
+  position: relative;
+  flex-grow: 1;
+  align-items: stretch;
+  display: flex;
+}
+/* My addition */
+/* .vertical-nav .info-icon {
+  background-color: #f5f0bf;
+}
+.vertical-nav .renewable-icon {
+  background-color: #D4E8C1;
+}
+.vertical-nav .fossil-icon {
+  background-color: #e6be8a;
+} */
+.vertical-nav li:hover > .info-icon,
+.vertical-nav li:focus-within > .info-icon {
+  /* background: #F5D769; */
+  /* background: rgba(255, 255, 255, 0.7); */
+  background: #eee593;
+  transition: all 0.2s ease;
+}
+.vertical-nav li:hover > .renewable-icon,
+.vertical-nav li:focus-within > .renewable-icon {
+  background: #8DB87C;
+  transition: all 0.2s ease;
+}
+.vertical-nav li:hover > .fossil-icon,
+.vertical-nav li:focus-within > .fossil-icon {
+  background: #BD8025;
+  transition: all 0.2s ease;
+}
+.vertical-nav .li-img {
+  width: 50%;
+  height: auto;
+}
+#nav-text {
+  top: 0em;
+  height: 100%;
+  width: auto;
+}
+/* end of my addition */
+.vertical-nav li:last-child {
+  border: none;
+}
+.vertical-nav li a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* flex-flow: column; */
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+/* .vertical-nav li:focus-within > a {
+  background: #fafafa;
+  transition: all 0.2s ease;
+} */
+/* .vertical-nav li:hover > a .feather {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+} */
+/* .vertical-nav li:hover > .hover-menu, */
+.vertical-nav li:focus-within > .hover-menu {
+  visibility: visible;
+  opacity: 1;
+  animation: slide-down 0.2s ease-out;
+  -webkit-animation: slide-down 0.2s ease-out;
+  -moz-animation: slide-down 0.2s ease-out;
+  transition: all 0.5s ease;
+  display: block;
+  height: 100vh;
+  bottom: 0;
+  overflow-y: auto;
+}
+.vertical-nav li .hover-menu {
+  background: #fafafa;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  opacity: 0;
+  display: none;
+  position: fixed;
+  left: 70px;
+  width: 500px;
+  height: 100vh;
+  min-width: 300px;
+  margin: 0;
+  padding: 25px;
+  top: 0px;
+  overflow-y: auto;
+  box-shadow: 0 0 40px #00000021;
+}
+.vertical-nav li .hover-menu:after {
+  right: 100%;
+  top: 20%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  /* border-right-color: #ffffff; */
+  border-width: 10px;
+  margin-top: -10px;
+}
+.vertical-nav li .hover-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.vertical-nav li .hover-menu ul li {
+  list-style: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+.vertical-nav li .hover-menu ul li a {
+  /* width: 100%; */
+  display: block;
+  text-decoration: none;
+  /* padding: 15px 20px; */
+  /* text-align: left; */
+  height: auto !important;
+  /* font-weight: 400; */
+  color: #000;
+}
+#intro-text p a {
+  text-decoration: underline;
+  color: blue !important;
+  /* display: none; */
+}
+/* .vertical-nav li .hover-menu ul li a:hover {
+  color: #BD8025;
+  transition: 0.3s ease;
+} */
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* 0 {
+    opacity:0;
+    transform: translateY(0);
+  } */
+}
+@-webkit-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+  /* 0 {
+    opacity:0;
+    -webkit-transform: translateY(0);
+  } */
+}
+@-moz-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+.content {
+  min-height: 100vh;
+  /* padding: 40px; */
+  color: #000;
+  width: 1170px;
+  margin: 0 auto;
+}
+h1,
+h2 {
+  color:#343535;
+  font-weight: 400;
+}
+h4 {
+  font-weight: bolder;
+}
+p,
+.content li {
+  color: #000;
+  line-height: 29px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.header-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.main-title {
+  /* z-index: 30; */
+  position: absolute;
+  /* background: #fff; */
+  /* box-shadow: 0 0 40px #00000021; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  /* align-items: left; */
+  margin: 0;
+  margin-left: 70px;
+  /* padding-left: 70px; */
+  padding: 25px;
+  height: 100vh;
+  width: 500px;
+}
+
+/* .main-title h4 {
+  margin-left: 70px;
+} */
+
+
+
+
+
+/* #wrapper {
+  width: 960px;
+  margin: 15px auto;
+} */
+
+/* .panel {
+  margin-top: 50px;
+} */
+
+.leaflet-popup-content p {
+  margin: 0.2em 0 !important;
+}
+
+/* #panel {
+  margin-left: 70px;
+  width: 500px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: medium;
+  text-align: left;
+  line-height: 42px;
+} */
+
+/* .panel-description {
+  width: 36%;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: medium;
+  text-align: left;
+  line-height: 42px;
+} */
+
+/* .panel-data {
+  width: 36%;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  font-size: smaller;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+} */
+
+#map {
+  z-index: 0;
+  height: 695px;
+  width: 948px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  margin-left: 570px;
+}
+
+.portfolio-tools,
+.portfolio-data {
+  font-size: small;
+  margin: 0;
+}
+
+#forward {
+  float: right;
+}
+
+#reverse {
+  float: left;
+}
+
+/* Style rules for creating a nested proportional symbol legend using div elements */
+.legend,
+.temporal-legend {
+  padding: 6px 10px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+#legendTitle {
+  text-align: center;
+  margin-bottom: 15px;
+  font-variant: small-caps;
+}
+.symbolsContainer {
+  float: left;
+  margin-left: 50px;
+}
+.legendCircle {
+  border-radius: 50%;
+  border: 1px solid #ff7800;
+  background: rgba(255, 120, 0, 0.6);
+  display: inline-block;
+}
+.legendValue {
+  position: absolute;
+  right: 8px;
+}
+
+/* Choropleth map */
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}

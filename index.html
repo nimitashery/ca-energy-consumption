@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CA Energy Consumption</title>
+
+		<!--put your external stylesheet links here-->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!--../css/bootstrap.min.css-->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css"> <!--../css/bootstrap-theme.min.css-->
+		<link rel="stylesheet" href="css/style.css"> <!--../css/style.css-->
+		<link rel="stylesheet" href="lib/leaflet/leaflet.css"> <!--../lib/leaflet/leaflet.css-->
+		<!--[if IE<9]>
+			<link rel="stylesheet" href="css/style.ie.css">
+		<![endif]-->
+	</head>
+
+	<body>
+		<!-- <div style="background-color: #c4aa7d;">	
+			<div class="container-fluid">
+				<nav class="navbar navbar-expand-lg navbar-expand">
+					<div class="container-fluid col-md-12">
+						<a class="navbar-brand" href="index.html">Energy Consumption in California</a>
+					</div>
+				</nav>
+			</div>
+		</div> -->
+
+		<div class="menu-container">
+			<ul class="vertical-nav">
+			  <li>
+				<a href="#" class="info-icon"><i data-feather="activity"></i>
+					<img src="img/FLAT-info.png" class="img-responsive li-img" alt="energy logo">
+				</a>
+				<div class="hover-menu">
+				  <ul>
+					<li>
+						<!-- <a href="#"> -->
+							<div class="intro-text" id="nav-text">
+					
+								<h4 id="title">Project Overview</h4>
+							
+								<p>This project is to show the growth of energy requirements in the State of California as well as the growth of renewable vs non-renewable energy sources within the state. To the general public, California has been a leader in the move away from fossil fuel dependance whether it is from bus, car, or electrical generation.</p>
+							
+								<p><b>Data sources: </b><a href="https://www.energy.ca.gov/">CA Energy Consumption</a> for energy data, <a href="http://www.naturalearthdata.com/">Natural Earth</a> for line work, and icons created by <a href="https://www.flaticon.com/free-icons/">Freepik - Flaticon.</a></p>
+							
+								<p>Cartographers/developers/designers: <a href="">Wesley Street</a> and <a href="https://nimitashery.github.io/">Nimita Shery</a>.</p>
+					
+							</div>
+						<!-- </a> -->
+					</li>
+				  </ul>
+				</div>
+			  </li>
+			  <li>
+				<a href="#" class="renewable-icon">
+					<i data-feather="box"></i>
+					<img src="img/FLAT-solar-energy.png" class="img-responsive li-img" alt="energy logo">
+				</a>
+				<div class="hover-menu">
+				  <ul>
+					<li>
+						<a href="#">
+							<div class="renewable-text" id="nav-text">
+					
+								<h4 id="title">Renewable Energy</h4>
+								<p>California uses a wide range of renewable energy resources to meet its clean energy goals, combat climate change, and promote sustainable energy use.</p>
+								<h6>Biomass</h6>
+								<p>Biomass electricity is drawn from combusting or decomposing organic matter. Biomass plants power homes and businesses with electricity from waste matter that would have been released into the atmosphere, added fuel to forest fires, or burdened landfills.</p>
+								<h6>Geothermal Energy</h6>
+								<p>Geothermal energy is a source of renewable energy in California. The Geysers, the world’s largest geothermal field, is in Sonoma, Lake, and Mendocino counties. Other major geothermal locations include the Salton Sea area in Imperial County, the Coso Hot Springs area in Inyo County, and the Mammoth Lakes area in Mono County. </p>
+								<h6>Hydroelectric Power</h6>
+								<p>Hydroelectric power in California is broken down into two categories: large hydro, which are facilities larger than 30 megawatts (MW), and small hydro. Small hydro plants qualify as renewable energy under the Renewables Portfolio Standard. The annual hydropower production in California varies yearly and depends on rainfall.</p>
+								<h6>Solar Energy</h6>
+								<p>Solar energy in California falls into two categories: solar thermal and solar photovoltaic. The California Energy Commission licenses solar thermal plants above 50 megawatts and promotes solar photovoltaic installation through the Renewables Portfolio Standard, with building efficiency standards, and as a partner in the California Solar Initiative.</p>
+								<h6>Wind Energy</h6>
+								<p>Wind energy, an integral part of California's electricity portfolio, is needed to help meet the state's Renewables Portfolio Standard, which requires utilities to procure 50 percent of retail sales from renewable sources by 2020 and 60 percent by 2030. Wind projects extend from Imperial County in the south to Shasta County in the north.</p>
+						
+							</div>
+						</a>
+					</li>
+				  </ul>
+				</div>
+			  </li>
+			  <li>
+				<a href="#" class="fossil-icon">
+					<i data-feather="cloud"></i>
+					<img src="img/FLAT-fossil-fuel.png" class="img-responsive li-img" alt="energy logo">
+				</a>
+				<div class="hover-menu">
+				  <ul>
+					<li>
+						<a href="#">
+							<div class="fossil-text" id="nav-text">
+					
+								<h4 id="title">Non-Renewable Energy</h4>
+							
+								<h6>Nuclear Energy</h6>
+								<p>California has two operating nuclear power reactors at one plant, three nuclear facilities at various stages of decommissioning, and multiple research reactors that are operational or undergoing decommissioning. The California Energy Commission coordinates the activities of state agencies involved with nuclear material shipments.</p>
+								<h6>Liquefied Natural Gas</h6>
+								<p>California gets about 10 percent of its liquefied natural gas (LNG) from in-state production and 90 percent from five interstate natural gas pipelines. California does not have a liquefied natural gas (LNG) terminal or any proposed LNG terminals along the coast.</p>
+								<h6>Combined Heat and Power</h6>
+								<p>Combined heat and power (CHP), or cogeneration, is the simultaneous generation of electrical or mechanical power and useful thermal energy from a single fuel source. CHP systems use thermal energy that would have gone to waste, helping raise the fuel efficiency of the fuel source while reducing greenhouse gas emissions (GHG).</p>
+						
+							</div>
+						</a>
+					</li>
+				  </ul>
+				</div>
+			  </li>
+			</ul>
+		</div>
+
+		<div class="main-title">
+			<h4>California Energy Map</h4>
+			<!-- <p>California is the most populous state in the nation and has the largest economy in the United States and the fifth-largest economy in the world. Rich in energy resources, California is second only to Texas in the combined total electricity generation from all renewable resources and leads the nation in generation from solar, geothermal, and biomass energy. California also has fossil energy resources, including an abundant supply of crude oil, and it has one-tenth of the U.S. crude oil refining capacity.</p> -->
+
+		</div>
+
+		<div id="map"></div>
+
+		
+		<!--put your initial page content here-->
+		<!-- <div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+					<div id="panel">
+						<h5>Energy Consumption in California</h5>
+						<p class="panel-description">
+							.......
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-8 content">
+					<div id="map"></div>
+					<div id="panel"></div>
+				</div>
+			</div> end of .row
+		</div> end of .container-fluid -->
+			
+
+		<!--put your external script links here-->
+		<script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>
+		<script type="text/javascript" src="lib/jquery-3.6.0.js"></script>
+		<!-- <script type="text/javascript" src="lib/bootstrap.min.js"></script> -->
+		<script type="text/javascript" src="js/L.Control.ZoomMin.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
