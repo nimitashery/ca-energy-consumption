@@ -1,7 +1,6 @@
-/* Javascript by Nimita Shery, 2022 */
 // https://cartographicperspectives.org/index.php/journal/article/view/cp76-donohue-et-al/1307
 // python -m http.server
-// http://localhost:8000/leaflet-lab/
+// http://localhost:8000/ca-energy-consumption/
 
 
 
