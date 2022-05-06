@@ -66,17 +66,19 @@ body {
 .vertical-nav li:focus-within > .info-icon {
   /* background: #F5D769; */
   /* background: rgba(255, 255, 255, 0.7); */
-  background: #eee593;
+  background: #f4f4f4;
   transition: all 0.2s ease;
 }
 .vertical-nav li:hover > .renewable-icon,
 .vertical-nav li:focus-within > .renewable-icon {
-  background: #8DB87C;
+  background: #a4d74d8b;
+  /* opacity: 0.8; */
   transition: all 0.2s ease;
 }
 .vertical-nav li:hover > .fossil-icon,
 .vertical-nav li:focus-within > .fossil-icon {
-  background: #BD8025;
+  background: #ffb247ad;
+  /* opacity: 0.8; */
   transition: all 0.2s ease;
 }
 .vertical-nav .li-img {
@@ -172,15 +174,23 @@ body {
   /* font-weight: 400; */
   color: #000;
 }
-#intro-text p a {
+#nav-text p a {
+  /* text-decoration: underline; */
+  color: #337ab7;
+  display: inline;
+}
+#nav-text p a:hover {
   text-decoration: underline;
-  color: blue !important;
+  color: #18578f;
   /* display: none; */
 }
 /* .vertical-nav li .hover-menu ul li a:hover {
   color: #BD8025;
   transition: 0.3s ease;
 } */
+.chart-img {
+  width: 450px;
+}
 @keyframes slide-down {
   0% {
     opacity: 0;
@@ -231,7 +241,7 @@ h2 {
   color:#343535;
   font-weight: 400;
 }
-h4 {
+h4, h6 {
   font-weight: bolder;
 }
 p,
@@ -270,6 +280,15 @@ p,
   margin-left: 70px;
 } */
 
+.legend-img {
+  width: 250px;
+  margin-top: 150px;
+  margin-left: 70px;
+}
+
+.leaflet-bar {
+  background-image: "../img/house-512.png";
+}
 
 
 
@@ -306,6 +325,19 @@ p,
   margin: 0;
 }
 
+/* #panel {
+  width: 26%;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  line-height: 42px;
+} */
+
+.range-slider {
+  width: 90%;
+}
+
 #forward {
   float: right;
 }
@@ -315,19 +347,25 @@ p,
 }
 
 /* Style rules for creating a nested proportional symbol legend using div elements */
-.legend,
-.temporal-legend {
+.legend {
   padding: 6px 10px;
-  font: 14px/16px Arial, Helvetica, sans-serif;
-  background: white;
+  font: 14px/16px , "Roboto Mono", sans-serif;
+  /* background: white; */
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
+.temporal-legend {
+  /* padding: 6px 10px; */
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+}
 #legendTitle {
   text-align: center;
   margin-bottom: 15px;
-  font-variant: small-caps;
+  color: #DC143C
+  /* font-variant: small-caps; */
 }
 .symbolsContainer {
   float: left;
@@ -335,8 +373,8 @@ p,
 }
 .legendCircle {
   border-radius: 50%;
-  border: 1px solid #ff7800;
-  background: rgba(255, 120, 0, 0.6);
+  border: 1px solid #ffb347;
+  background: #ffb247ad;
   display: inline-block;
 }
 .legendValue {
@@ -348,13 +386,15 @@ p,
 
 .info {
   padding: 6px 8px;
-  font: 14px/16px Arial, Helvetica, sans-serif;
+  font: 14px/16px, "Roboto Mono", sans-serif;
+  font-size: 14px;
   background: white;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 .info h4 {
+  /* font: 14px/16px, "Roboto Mono", sans-serif; */
   margin: 0 0 5px;
   color: #777;
 }

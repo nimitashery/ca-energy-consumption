@@ -1,11 +1,11 @@
 L.Control.ZoomMin = L.Control.Zoom.extend({
   options: {
     position: "topleft",
-    zoomInText: "+",
+    /* zoomInText: "+",
     zoomInTitle: "Zoom in",
     zoomOutText: "-",
-    zoomOutTitle: "Zoom out",
-    zoomMinText: "Zoom min",
+    zoomOutTitle: "Zoom out", */
+    zoomMinText: "Home",
     zoomMinTitle: "Zoom min"
   },
 
@@ -16,11 +16,11 @@ L.Control.ZoomMin = L.Control.Zoom.extend({
 
     this._map = map
 
-    this._zoomInButton = this._createButton(options.zoomInText, options.zoomInTitle,
+    /* this._zoomInButton = this._createButton(options.zoomInText, options.zoomInTitle,
      zoomName + '-in', container, this._zoomIn, this)
 
     this._zoomOutButton = this._createButton(options.zoomOutText, options.zoomOutTitle,
-     zoomName + '-out', container, this._zoomOut, this)
+     zoomName + '-out', container, this._zoomOut, this) */
 
     this._zoomMinButton = this._createButton(options.zoomMinText, options.zoomMinTitle,
      zoomName + '-min', container, this._zoomMin, this)
@@ -43,17 +43,17 @@ L.Control.ZoomMin = L.Control.Zoom.extend({
     var map = this._map
       , className = "leaflet-disabled"
 
-    L.DomUtil.removeClass(this._zoomInButton, className)
-    L.DomUtil.removeClass(this._zoomOutButton, className)
+    /* L.DomUtil.removeClass(this._zoomInButton, className)
+    L.DomUtil.removeClass(this._zoomOutButton, className) */
     L.DomUtil.removeClass(this._zoomMinButton, className)
 
-    if (map._zoom === map.getMinZoom()) {
+    /* if (map._zoom === map.getMinZoom()) {
       L.DomUtil.addClass(this._zoomOutButton, className)
     }
 
     if (map._zoom === map.getMaxZoom()) {
       L.DomUtil.addClass(this._zoomInButton, className)
-    }
+    } */
 
     if (map._zoom === map.getMinZoom()) {
       L.DomUtil.addClass(this._zoomMinButton, className)

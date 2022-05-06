@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>CA Energy Consumption</title>
+		<title>CA Energy Map</title>
 
 		<!--put your external stylesheet links here-->
 		<link rel="stylesheet" href="css/bootstrap.min.css"> <!--../css/bootstrap.min.css-->
@@ -32,13 +32,23 @@
 					
 								<h4 id="title">Project Overview</h4>
 							
-								<p>This project is to show the growth of energy requirements in the State of California as well as the growth of renewable vs non-renewable energy sources within the state. To the general public, California has been a leader in the move away from fossil fuel dependance whether it is from bus, car, or electrical generation.</p>
+								<p>California has the reputation nationally and internationally as a leader in the reduction of emissions of greenhouse gases from the burning of fossil fuels.  With California becoming the most populous state in 1962 combined with ever increasing needs for electricity and personal automobile after World War II, the state started looking to cut down on pollutants.</p>
+								<p>One example of California’s leadership in this area was the creation of the California Air Resources Board (CARB) in 1967.  It was focused on improving air quality and reducing air pollutants through the regulation of engine emissions.  In fact, in 2024, small gas motors will no longer be legal to sell in the state forcing a change over to electrically powered lawnmowers, lawn and garden equipment, and other things powered by these engines.  The state also gives out one of the largest state incentives for electric and plug-in hybrid vehicles in the Unites States.</p>
+								<p>With its ever-increasing population, California has needed to increase energy generation while reducing its carbon footprint.  According to a report from the U.S. Energy Information Administration (EIA), California was second in the US for electrical generation from renewables: first in solar, geothermal, and biomass; fourth in hydroelectric; and sixth in wind.</p>
+								<p>The growth is especially noticeable in the South East portion of the state where the desert is particularly well suited for solar production.  Harnessing the power of tectonic plates has led to over 40 geothermal plants north of San Francisco.  Of note should be Kern County which generates more than 50% of the state’s renewable energy with the largest wind and geothermal facilities and the second-largest solar field in the US.</p>
+								
+								<img src="img/line-chart.png" class="chart-img" alt="chart">
 							
-								<p><b>Data sources: </b><a href="https://www.energy.ca.gov/">CA Energy Consumption</a> for energy data, <a href="http://www.naturalearthdata.com/">Natural Earth</a> for line work, and icons created by <a href="https://www.flaticon.com/free-icons/">Freepik - Flaticon.</a></p>
+								<p><b>Data sources:</b><br>
+									<a href="https://www.energy.ca.gov/">CA Energy Commission</a>,  
+									<a href="https://www.eia.gov/state/analysis.php?sid=CA">EIA California State Energy Profile</a>,  
+									<a href="https://www.bakersfield.com/opinion/community-voices/community-voices-kern-s-energy-industry-continues-to-power-the-region-s-economic-growth/article_4e685fee-901d-11ec-9497-7f4ec7e39708.html#:~:text=Kern%20County%20has%20been%20declared,field%20call%20Kern%20County%20home.">Community Voices: Kern’s energy industry continues to power the region’s economic growth</a>,  
+									<a href="https://en.wikipedia.org/wiki/Renewable_energy_in_California">Renewable energy in California</a> for energy data and <a href="https://www.flaticon.com/free-icons/">Freepik - Flaticon</a> for icons.</p>
 							
-								<p>Cartographers/developers/designers: <a href="">Wesley Street</a> and <a href="https://nimitashery.github.io/">Nimita Shery</a>.</p>
+								<p><b>Cartographers/developers/designers:</b><br><a href="https://pkt1213.github.io/uw-gispp-572.github.io/">Wesley Street</a> and <a href="https://nimitashery.github.io/">Nimita Shery</a>.</p>
 					
 							</div>
+							
 						<!-- </a> -->
 					</li>
 				  </ul>
@@ -83,16 +93,16 @@
 				  <ul>
 					<li>
 						<a href="#">
-							<div class="fossil-text" id="nav-text">
+							<div class="nonrenewable-text" id="nav-text">
 					
-								<h4 id="title">Non-Renewable Energy</h4>
+								<h4 id="title">Non-Renewable and Nuclear Energy</h4>
 							
-								<h6>Nuclear Energy</h6>
-								<p>California has two operating nuclear power reactors at one plant, three nuclear facilities at various stages of decommissioning, and multiple research reactors that are operational or undergoing decommissioning. The California Energy Commission coordinates the activities of state agencies involved with nuclear material shipments.</p>
 								<h6>Liquefied Natural Gas</h6>
 								<p>California gets about 10 percent of its liquefied natural gas (LNG) from in-state production and 90 percent from five interstate natural gas pipelines. California does not have a liquefied natural gas (LNG) terminal or any proposed LNG terminals along the coast.</p>
-								<h6>Combined Heat and Power</h6>
-								<p>Combined heat and power (CHP), or cogeneration, is the simultaneous generation of electrical or mechanical power and useful thermal energy from a single fuel source. CHP systems use thermal energy that would have gone to waste, helping raise the fuel efficiency of the fuel source while reducing greenhouse gas emissions (GHG).</p>
+								<!-- <h6>Combined Heat and Power</h6>
+								<p>Combined heat and power (CHP), or cogeneration, is the simultaneous generation of electrical or mechanical power and useful thermal energy from a single fuel source. CHP systems use thermal energy that would have gone to waste, helping raise the fuel efficiency of the fuel source while reducing greenhouse gas emissions (GHG).</p> -->
+								<h6>Nuclear Energy</h6>
+								<p>California has two operating nuclear power reactors at one plant, three nuclear facilities at various stages of decommissioning, and multiple research reactors that are operational or undergoing decommissioning. The California Energy Commission coordinates the activities of state agencies involved with nuclear material shipments.</p>
 						
 							</div>
 						</a>
@@ -105,13 +115,13 @@
 
 		<div class="main-title">
 			<h4>California Energy Map</h4>
-			<!-- <p>California is the most populous state in the nation and has the largest economy in the United States and the fifth-largest economy in the world. Rich in energy resources, California is second only to Texas in the combined total electricity generation from all renewable resources and leads the nation in generation from solar, geothermal, and biomass energy. California also has fossil energy resources, including an abundant supply of crude oil, and it has one-tenth of the U.S. crude oil refining capacity.</p> -->
-
+			<p>The choropleth map represents the energy consumption in each California county and the proportional symbol map shows the energy (renewable and fossil fuels) generated in each county from 2011 to 2020.</p>
+			<img src="img/Legend150-01-edited2.png" class="legend-img" alt="legend">
 		</div>
 
 		
 		<div id="map"></div>
-
+		
 			
 
 		<!--put your external script links here-->
