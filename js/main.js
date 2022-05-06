@@ -215,9 +215,9 @@ $(document).ready(function() {
     // method that we will use to update the control based on feature properties passed
     info.update = function (e, timestamp, countyName, gWh) {
         console.log("update()-props:", timestamp);
-        console.log("gWh=", gWh);
+        console.log("gWh=", parseInt(gWh));
         this._div.innerHTML = '<h6  style="color:#54278f">California Energy Consumption</h6>' +  (
-            gWh ? '<b>' + countyName + '</b> (' + timestamp + ')<br>' + gWh + ' <i>GWh</i>': '(Hover over a County)');
+            parseInt(gWh) ? '<b>' + countyName + '</b> (' + timestamp + ')<br>' + parseInt(gWh) + ' <i>GWh</i>': '(Hover over a County)');
     };
 
     // event listener for layer mouseover event
@@ -267,7 +267,7 @@ $(document).ready(function() {
         for (var i = 0; i < grades.length; i++) {
             labels.push(
                 '<i style="background:' + getColor(grades[i]-1) + '"></i>' +
-                ' < ' + grades[i] + '<br>')
+                ' < ' + grades[i] + ' GWh<br>')
         }
         div.innerHTML = labels.join('');
         return div;
@@ -398,7 +398,7 @@ $(document).ready(function() {
             //build popup content string
             var popupContent = "<b>County:</b> " + props.County + "<br>" +//FIXME:
                     "<b>Total Energy Generation (" + timestamp +
-                    ") </b><br>" + String(props[timestamp]*.001) + " <i>GWh</i>";
+                    ") </b><br>" + parseInt(String(props[timestamp]*.001)) + " <i>GWh</i>";
 
             layer.setRadius(radius);
             layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) });
@@ -409,7 +409,7 @@ $(document).ready(function() {
             //build popup content string
             var popupContent = "<b>County:</b> " + props.County + "<br>" +//FIXME:
                     "<b>Renewable Energy Generation (" + timestamp +
-                    ") </b><br>" + String(props[timestamp]*.001) + " <i>GWh</i>";
+                    ") </b><br>" + parseInt(String(props[timestamp]*.001)) + " <i>GWh</i>";
 
             layer.setRadius(radius);
             layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) });
